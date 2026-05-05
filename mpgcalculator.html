@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MPG Calculator</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="bis23.html">BIS 23 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="equipbudget.html">Equipment Budget</a></li>
+          <li><a href="WebtechSeries.html">Web Tech Series</a></li>
+          <li><a href="https://cruzd08.github.io/cruzdelossantos.github.io/index.html" target="_blank">Setting Up Web Server</a></li>
+          <li><a href="wsproposal3.html">Requirement Documents</a></li>
+          <li><a href="https://cruzd08.github.io/CSS-Nav-Menu/" target="_blank">CSS Navigation</a></li>
+          <li><a href="debugging.html">Debugging &amp; Pseudo Code</a></li>
+          <li><a href="jspresentation.html">JS Presentation</a></li>
+          <li><a href="mpgcalculator.html">MPG Calculator</a></li>
+          <li><a href="slider.html">Image Slider</a></li>
+          <li><a href="airisen.html">AI RISEN</a></li>
+          <li><a href="invoiceform.html">Invoice Form</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="bis31.html">BIS 31 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="researchbusws.html">Research Business Web Sites</a></li>
+          <li><a href="https://cruzd08.github.io/cruzdelossantos.github.io/index.html" target="_blank">Setting Up Web Server</a></li>
+          <li><a href="wsproposal1.html">Requirement Documents</a></li>
+          <li><a href="phpquiz.html">W3Schools PHP Quiz</a></li>
+          <li><a href="https://cruzd08.github.io/CSS-Nav-Menu/" target="_blank">CSS Navigation</a></li>
+          <li><a href="php_loops.html">PHP Loops</a></li>
+          <li><a href="randomValues.php">Random Numbers in PHP</a></li>
++          <li><a href="signupform.html">Sign Up Form</a></li>
+          <li><a href="webform.html" target="_blank">PHP &amp; MySQL Setup</a></li>
+          <li><a href="paycheck.html">Paycheck Calculator</a></li>
+        </ul>
+      </li>
+      <li><a href="bis23projects.html">BIS 23 Projects</a></li>
+      <li><a href="bis31projects.html">BIS 31 Projects</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="page-intro fade-up">
+    <span class="badge">BIS 23</span>
+    <h1>Miles Per Gallon Calculator</h1>
+    <p>A front-end calculator built with HTML, CSS, and JavaScript. Enter your miles traveled and gallons used to calculate your vehicle's fuel efficiency.</p>
+  </div>
+
+  <!-- Debugged Pseudocode -->
+  <div class="flowchart-card fade-up delay-1">
+    <h2>Debugged Pseudocode</h2>
+    <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:12px;">
+      Original bug: used <code>+</code> instead of <code>/</code>, wrong variable name in output, and <code>start</code> appeared twice instead of <code>stop</code>.
+    </p>
+    <pre>start
+  input milesTraveled
+  input gallonsOfGasUsed
+  milesPerGallon = milesTraveled / gallonsOfGasUsed
+  output milesPerGallon
+stop</pre>
+  </div>
+
+  <!-- Calculator -->
+  <div class="calc-wrapper fade-up delay-2">
+    <div class="calc-logo">⛽</div>
+
+    <div class="calc-card">
+      <h2 style="margin-top:0; text-align:center;">MPG Calculator</h2>
+
+      <div class="calc-field">
+        <label for="milesTraveled">Miles Traveled</label>
+        <input type="number" id="milesTraveled" placeholder="e.g. 350" min="0" step="any">
+      </div>
+
+      <div class="calc-divider">÷</div>
+
+      <div class="calc-field">
+        <label for="gallonsUsed">Gallons Used</label>
+        <input type="number" id="gallonsUsed" placeholder="e.g. 12.5" min="0" step="any">
+      </div>
+
+      <button class="calc-btn" id="calcBtn">= Calculate MPG</button>
+
+      <div class="calc-error" id="calcError"></div>
+
+      <div class="calc-result" id="calcResult">
+        <div class="result-label">Your Miles Per Gallon is</div>
+        <div class="result-number" id="mpgOutput">—</div>
+        <div class="result-unit">miles per gallon</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© Copyright 2026. All Rights Reserved.</p>
+  <p><a href="mailto:cruzmeirycollado@gmail.com">cruzmeirycollado@gmail.com</a></p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

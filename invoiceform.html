@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Form</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="bis23.html">BIS 23 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="equipbudget.html">Equipment Budget</a></li>
+          <li><a href="WebtechSeries.html">Web Tech Series</a></li>
+          <li><a href="https://cruzd08.github.io/cruzdelossantos.github.io/index.html" target="_blank">Setting Up Web Server</a></li>
+          <li><a href="wsproposal3.html">Requirement Documents</a></li>
+          <li><a href="https://cruzd08.github.io/CSS-Nav-Menu/" target="_blank">CSS Navigation</a></li>
+          <li><a href="debugging.html">Debugging &amp; Pseudo Code</a></li>
+          <li><a href="jspresentation.html">JS Presentation</a></li>
+          <li><a href="mpgcalculator.html">MPG Calculator</a></li>
+          <li><a href="slider.html">Image Slider</a></li>
+          <li><a href="airisen.html">AI RISEN</a></li>
+          <li><a href="invoiceform.html">Invoice Form</a></li>
+         
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="bis31.html">BIS 31 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="researchbusws.html">Research Business Web Sites</a></li>
+          <li><a href="https://cruzd08.github.io/cruzdelossantos.github.io/index.html" target="_blank">Setting Up Web Server</a></li>
+          <li><a href="wsproposal1.html">Requirement Documents</a></li>
+          <li><a href="phpquiz.html">W3Schools PHP Quiz</a></li>
+          <li><a href="https://cruzd08.github.io/CSS-Nav-Menu/" target="_blank">CSS Navigation</a></li>
+          <li><a href="php_loops.html">PHP Loops</a></li>
+          <li><a href="randomValues.php">Random Numbers in PHP</a></li>
+          <li><a href="signupform.html">Sign Up Form</a></li>
+          <li><a href="webform.html" target="_blank">PHP &amp; MySQL Setup</a></li>
+          <li><a href="paycheck.html">Paycheck Calculator</a></li>
+        </ul>
+      </li>
+      <li><a href="bis23projects.html">BIS 23 Projects</a></li>
+      <li><a href="bis31projects.html">BIS 31 Projects</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="page-intro fade-up">
+    <span class="badge">BIS 23</span>
+    <h1>Invoice Form</h1>
+    <p>A functional invoice form with auto-calculated totals. Fill in the fields, add items, and print when ready.</p>
+  </div>
+
+  <!-- INVOICE -->
+  <div class="invoice-page fade-up delay-1">
+
+    <!-- Header -->
+    <div class="invoice-header">
+      <p class="invoice-company-name">Adventures Travel Agency</p>
+      <div class="invoice-company-info">
+        123 Main Street, New York, NY, 10453<br>
+        929-555-0176 | 229-555-8888<br>
+      </div>
+    </div>
+
+    <!-- Invoice Number & Date -->
+    <div class="invoice-meta">
+      <p class="invoice-number">Invoice # 100</p>
+      <p class="invoice-date">
+        Date: <input type="date" id="invDate">
+      </p>
+    </div>
+
+    <!-- Bill To / For -->
+    <div class="invoice-parties">
+      <div class="invoice-party">
+        <h3>Bill To</h3>
+        <input class="invoice-field" type="text" placeholder="Name | Company">
+        <input class="invoice-field" type="text" placeholder="Address, City, ST, ZIP Code">
+        <input class="invoice-field" type="text" placeholder="Phone">
+      </div>
+      <div class="invoice-party">
+        <h3>For</h3>
+        <input class="invoice-field" type="text" placeholder="Product Description">
+      </div>
+    </div>
+
+    <!-- Items Table -->
+    <div class="invoice-table-wrap">
+      <table class="invoice-table" id="invoiceItems">
+        <thead>
+          <tr>
+            <th>Item Description</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" placeholder="Item description..."></td>
+            <td><input type="number" class="amount-field" placeholder="0.00" step="0.01" min="0"></td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Item description..."></td>
+            <td><input type="number" class="amount-field" placeholder="0.00" step="0.01" min="0"></td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Item description..."></td>
+            <td><input type="number" class="amount-field" placeholder="0.00" step="0.01" min="0"></td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Item description..."></td>
+            <td><input type="number" class="amount-field" placeholder="0.00" step="0.01" min="0"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button class="invoice-add-row" id="addInvoiceRow">+ Add Row</button>
+
+    <!-- Totals -->
+    <div class="invoice-totals">
+      <table class="invoice-totals-table">
+        <tr>
+          <td>Subtotal</td>
+          <td id="invSubtotal">$0.00</td>
+        </tr>
+        <tr>
+          <td>Tax Rate</td>
+          <td><input class="total-input" type="number" id="invTax" placeholder="0.00" step="0.01" min="0"></td>
+        </tr>
+        <tr>
+          <td>Other Costs</td>
+          <td><input class="total-input" type="number" id="invOther" placeholder="0.00" step="0.01" min="0"></td>
+        </tr>
+        <tr class="total-row">
+          <td>Total Cost</td>
+          <td id="invTotal">$0.00</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="invoice-footer">
+      <input type="text" placeholder="Make all checks payable to Company Name">
+      <input type="text" placeholder="If you have any questions concerning this invoice, use the following contact information:">
+      <input type="text" placeholder="Contact Name, Phone Number, Email">
+      <input type="text" placeholder="Thank you for your business!">
+    </div>
+
+    <!-- Actions -->
+    <div class="invoice-actions">
+      <button class="invoice-btn invoice-btn-outline" id="invReset">Clear Form</button>
+      <button class="invoice-btn invoice-btn-primary" id="invPrint">🖨️ Print Invoice</button>
+    </div>
+
+  </div><!-- end invoice-page -->
+
+</div>
+
+<footer>
+  <p>© Copyright 2026. All Rights Reserved.</p>
+  <p><a href="mailto:cruzmeirycollado@gmail.com">cruzmeirycollado@gmail.com</a></p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

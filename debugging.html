@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debugging &amp; Pseudo Code</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="bis23.html">BIS 23 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="equipbudget.html">Equipment Budget</a></li>
+          <li><a href="WebtechSeries.html">Web Tech Series</a></li>
+          <li><a href="https://cruzd08.github.io/cruzdelossantos.github.io/index.html" target="_blank">Setting Up Web Server</a></li>
+          <li><a href="wsproposal3.html">Requirement Documents</a></li>
+          <li><a href="https://cruzd08.github.io/CSS-Nav-Menu/" target="_blank">CSS Navigation</a></li>
+          <li><a href="debugging.html">Debugging &amp; Pseudo Code</a></li>
+          <li><a href="jspresentation.html">JS Presentation</a></li>
+          <li><a href="mpgcalculator.html">MPG Calculator</a></li>
+          <li><a href="slider.html">Image Slider</a></li>
+          <li><a href="airisen.html">AI RISEN</a></li>
+          <li><a href="invoiceform.html">Invoice Form</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="bis31.html">BIS 31 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="researchbusws.html">Research Business Web Sites</a></li>
+          <li><a href="https://cruzd08.github.io/cruzdelossantos.github.io/index.html" target="_blank">Setting Up Web Server</a></li>
+          <li><a href="wsproposal1.html">Requirement Documents</a></li>
+          <li><a href="phpquiz.html">W3Schools PHP Quiz</a></li>
+          <li><a href="https://cruzd08.github.io/CSS-Nav-Menu/" target="_blank">CSS Navigation</a></li>
+          <li><a href="php_loops.html">PHP Loops</a></li>
+          <li><a href="randomValues.php">Random Numbers in PHP</a></li>
+          <li><a href="signupform.html">Sign Up Form</a></li>
+          <li><a href="webform.html" target="_blank">PHP &amp; MySQL Setup</a></li>
+          <li><a href="paycheck.html">Paycheck Calculator</a></li>
+        </ul>
+      </li>
+      <li><a href="bis23projects.html">BIS 23 Projects</a></li>
+      <li><a href="bis31projects.html">BIS 31 Projects</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="page-intro fade-up">
+    <span class="badge">BIS 23</span>
+    <h1>Debugging &amp; Pseudo Code</h1>
+    <p>This assignment covers flowchart design and pseudocode debugging. Each flowchart represents a logical process, followed by the corrected pseudocode script.</p>
+  </div>
+
+  <!-- Flowchart 1 -->
+  <div class="flowchart-card fade-up">
+    <h2>Flowchart 1 — Miles Per Gallon</h2>
+    <img src="images/Flowchart1.png" alt="Flowchart 1 - Miles Per Gallon" style="max-width:340px;">
+    <h4>Debugged Pseudocode</h4>
+    <pre>start
+  input milesTraveled
+  input gallonsOfGasUsed
+  milesPerGallon = milesTraveled / gallonsOfGasUsed
+  output milesPerGallon
+stop</pre>
+  </div>
+
+  <!-- Flowchart 2 -->
+  <div class="flowchart-card fade-up">
+    <h2>Flowchart 2 — Cost Per Day</h2>
+    <img src="images/Flowchart2.png" alt="Flowchart 2 - Cost Per Day" style="max-width:340px;">
+    <h4>Debugged Pseudocode</h4>
+    <pre>start
+  input rent
+  costPerDay = rent / 30
+  output costPerDay
+stop</pre>
+  </div>
+
+  <!-- Flowchart 3 -->
+  <div class="flowchart-card fade-up">
+    <h2>Flowchart 3 — Tablespoons to Teaspoons</h2>
+    <img src="images/Flowchart3.png" alt="Flowchart 3 - Tablespoons to Teaspoons" style="max-width:340px;">
+    <h4>Debugged Pseudocode</h4>
+    <pre>start
+  input tablespoons
+  teaspoons = tablespoons * 3
+  output teaspoons
+stop</pre>
+  </div>
+
+  <!-- Flowchart 4 -->
+  <div class="flowchart-card fade-up">
+    <h2>Flowchart 4 — Monthly Budget</h2>
+    <img src="images/flowchart4.drawio.png" alt="Flowchart 4 - Monthly Budget" style="max-width:500px;">
+    <h4>Debugged Pseudocode</h4>
+    <pre>start
+  input monthlyPay
+  input rent
+  input utilities
+  input groceries
+
+  totalBills = rent + utilities + groceries
+  discretionary = pay - totalBills
+
+  output pay
+  output totalBills
+  output discretionary
+stop</pre>
+  </div>
+
+</div>
+
+<footer>
+  <p>© Copyright 2026. All Rights Reserved.</p>
+  <p><a href="mailto:cruzmeirycollado@gmail.com">cruzmeirycollado@gmail.com</a></p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="bis23.html">BIS 23 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="equipbudget.html">Equipment Budget</a></li>
+          <li><a href="WebtechSeries.html">Web Tech Series</a></li>
+          <li><a href="https://cruzd08.github.io/cruzdelossantos.github.io/index.html" target="_blank">Setting Up Web Server</a></li>
+          <li><a href="wsproposal3.html">Requirement Documents</a></li>
+          <li><a href="https://cruzd08.github.io/CSS-Nav-Menu/" target="_blank">CSS Navigation</a></li>
+          <li><a href="debugging.html">Debugging &amp; Pseudo Code</a></li>
+          <li><a href="jspresentation.html">JS Presentation</a></li>
+          <li><a href="mpgcalculator.html">MPG Calculator</a></li>
+          <li><a href="slider.html">Image Slider</a></li>
+          <li><a href="airisen.html">AI RISEN</a></li>
+          <li><a href="invoiceform.html">Invoice Form</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="bis31.html">BIS 31 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="researchbusws.html">Research Business Web Sites</a></li>
+          <li><a href="https://cruzd08.github.io/cruzdelossantos.github.io/index.html" target="_blank">Setting Up Web Server</a></li>
+          <li><a href="wsproposal1.html">Requirement Documents</a></li>
+          <li><a href="phpquiz.html">W3Schools PHP Quiz</a></li>
+          <li><a href="https://cruzd08.github.io/CSS-Nav-Menu/" target="_blank">CSS Navigation</a></li>
+          <li><a href="php_loops.html">PHP Loops</a></li>
+          <li><a href="randomValues.php">Random Numbers in PHP</a></li>
++          <li><a href="signupform.html">Sign Up Form</a></li>
+          <li><a href="webform.html" target="_blank">PHP &amp; MySQL Setup</a></li>
+          <li><a href="paycheck.html">Paycheck Calculator</a></li>
+        </ul>
+      </li>
+      <li><a href="bis23projects.html">BIS 23 Projects</a></li>
+      <li><a href="bis31projects.html">BIS 31 Projects</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="page-intro fade-up">
+    <span class="badge">BIS 23</span>
+    <h1>Auto Image Slider</h1>
+    <p>An interactive image slideshow built with HTML, CSS, and JavaScript — featuring auto-play, forward/back controls, dot navigation, thumbnail previews, and a progress bar.</p>
+  </div>
+
+  <div class="slider-section fade-up delay-1">
+
+    <div class="slider-wrapper">
+
+      <!-- Progress bar -->
+      <div class="slider-progress">
+        <div class="slider-progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- Slides -->
+      <div class="slider-track" id="sliderTrack">
+
+        <div class="slide">
+          <img src="images/montain2.HEIC" alt="Seongsan Ilchulbong Peak">
+          <div class="slide-caption">
+            <h3>Seongsan Ilchulbong</h3>
+            <p>A tourist spot in Jeju-do. Formed by volcanic eruptions.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/montain1.HEIC" alt="Top of Ilchulbong mountain">
+          <div class="slide-caption">
+            <h3>Seongsan Ilchulbong Peak</h3>
+            <p>This is the top of the mountain. A UNESCO World Heritage site.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/artvalley.HEIC" alt="Pocheon Art Valley">
+          <div class="slide-caption">
+            <h3>Pocheon Art Valley</h3>
+            <p>A former quarry turned into a scenic park with turquoise waters and cliffs.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/ship.HEIC" alt="Sabang Memorial Park">
+          <div class="slide-caption">
+            <h3>Sabang Memorial Park</h3>
+            <p>A coastal park known for its scenic ocean views and iconic boat photo spot.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/sunset.heic" alt="Crabby Joe's Deck Grill Restaurant">
+          <div class="slide-caption">
+            <h3>Crabby Joe's Deck Grill</h3>
+            <p> A beachfront restaurant where you can enjoy the ocean views and a beautiful sunset.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/medusas.heic" alt="Jellyfish in the aquarium">
+          <div class="slide-caption">
+            <h3>Jellyfish</h3>
+            <p>Jellyfish floating peacefully and glowing softly inside the aquarium.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/us.HEIC" alt="Me and My Friends">
+          <div class="slide-caption">
+            <h3>Me and My Friends</h3>
+            <p>Me and my friend at a cozy café in Seoul, captured by the owner who kindly offered to take our photo, a truly sweet and unforgettable moment.</p>
+          </div>
+        </div>
+
+      </div><!-- end slider-track -->
+
+      <!-- Prev / Next -->
+      <button class="slider-btn prev" id="btnPrev" aria-label="Previous slide">&#8592;</button>
+      <button class="slider-btn next" id="btnNext" aria-label="Next slide">&#8594;</button>
+
+    </div><!-- end slider-wrapper -->
+
+    <!-- Dots -->
+    <div class="slider-dots">
+      <button class="dot active" aria-label="Slide 1"></button>
+      <button class="dot" aria-label="Slide 2"></button>
+      <button class="dot" aria-label="Slide 3"></button>
+      <button class="dot" aria-label="Slide 4"></button>
+      <button class="dot" aria-label="Slide 5"></button>
+    </div>
+
+    <!-- Thumbnails (extra credit) -->
+    <div class="slider-thumbs">
+      <img src="images/montain2.HEIC" alt="Seongsan Ilchulbong Peak"  class="thumb active">
+      <img src="images/montain1.HEIC"      alt="Top of Ilchulbong mountain" class="thumb">
+      <img src="images/artvalley.HEIC"    alt="Pocheon Art Valley"       class="thumb">
+      <img src="images/ship.HEIC"   alt="Sabang Memorial Park"     class="thumb">
+      <img src="images/sunset.heic"  alt="Crabby Joe's Deck Grill Restaurant"    class="thumb">
+      <img src="images/medusas.heic"  alt="Jellyfish in the aquarium"    class="thumb">
+      <img src="images/us.HEIC"  alt="Me and My Friends"    class="thumb">
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <p>© Copyright 2026. All Rights Reserved.</p>
+  <p><a href="mailto:cruzmeirycollado@gmail.com">cruzmeirycollado@gmail.com</a></p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

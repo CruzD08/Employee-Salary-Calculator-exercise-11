@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Presentation</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="bis23.html">BIS 23 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="equipbudget.html">Equipment Budget</a></li>
+          <li><a href="WebtechSeries.html">Web Tech Series</a></li>
+          <li><a href="https://cruzd08.github.io/cruzdelossantos.github.io/index.html" target="_blank">Setting Up Web Server</a></li>
+          <li><a href="wsproposal3.html">Requirement Documents</a></li>
+          <li><a href="https://cruzd08.github.io/CSS-Nav-Menu/" target="_blank">CSS Navigation</a></li>
+          <li><a href="debugging.html">Debugging &amp; Pseudo Code</a></li>
+          <li><a href="jspresentation.html">JS Presentation</a></li>
+          <li><a href="mpgcalculator.html">MPG Calculator</a></li>
+          <li><a href="slider.html">Image Slider</a></li>
+          <li><a href="airisen.html">AI RISEN</a></li>
+          <li><a href="invoiceform.html">Invoice Form</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="bis31.html">BIS 31 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="researchbusws.html">Research Business Web Sites</a></li>
+          <li><a href="https://cruzd08.github.io/cruzdelossantos.github.io/index.html" target="_blank">Setting Up Web Server</a></li>
+          <li><a href="wsproposal1.html">Requirement Documents</a></li>
+          <li><a href="phpquiz.html">W3Schools PHP Quiz</a></li>
+          <li><a href="https://cruzd08.github.io/CSS-Nav-Menu/" target="_blank">CSS Navigation</a></li>
+          <li><a href="php_loops.html">PHP Loops</a></li>
+          <li><a href="randomValues.php">Random Numbers in PHP</a></li>
++         <li><a href="signupform.html">Sign Up Form</a></li>
+          <li><a href="webform.html" target="_blank">PHP &amp; MySQL Setup</a></li>
+          <li><a href="paycheck.html">Paycheck Calculator</a></li>
+        </ul>
+      </li>
+      <li><a href="bis23projects.html">BIS 23 Projects</a></li>
+      <li><a href="bis31projects.html">BIS 31 Projects</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="page-intro fade-up">
+    <span class="badge">BIS 23</span>
+    <h1>JS Presentation</h1>
+    <p>A demonstration of basic JavaScript concepts — including variables, arithmetic operators, and data type behavior using <code>document.getElementById()</code>.</p>
+  </div>
+
+  <div class="flowchart-card fade-up delay-1">
+    <h2>Presentation</h2>
+    <p id="presentation"></p>
+  </div>
+
+  <div class="flowchart-card fade-up delay-2">
+    <h2>Minimalistic Calculator</h2>
+    <p id="calculator"></p>
+  </div>
+
+  <div class="flowchart-card fade-up delay-3">
+    <h2>Values Prediction</h2>
+    <p id="values"></p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© Copyright 2026. All Rights Reserved.</p>
+  <p><a href="mailto:cruzmeirycollado@gmail.com">cruzmeirycollado@gmail.com</a></p>
+</footer>
+
+<script src="main.js"></script>
+<script>
+// Presentation
+let name = "Cruz De Los Santos <br>";
+let age = 23;
+document.getElementById("presentation").innerHTML =
+  "My name is " + name + " and I am " + age + " years old.";
+
+// Calculator
+document.getElementById("calculator").innerHTML =
+  "6 + 3 = " + (6 + 3) + "<br>" +
+  "6 - 3 = " + (6 - 3) + "<br>" +
+  "6 * 3 = " + (6 * 3) + "<br>" +
+  "6 / 3 = " + (6 / 3);
+
+// Values Prediction
+document.getElementById("values").innerHTML =
+  "4 + 5 = " + (4 + 5) + "<br>" +
+  '"4 + 5" = 4 + 5' + "<br>" +
+  '"4" + "5" = ' + ("4" + "5");
+</script>
+</body>
+</html>
